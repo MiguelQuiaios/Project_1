@@ -1,13 +1,15 @@
 class Component {
-  constructor(x, y, w, h, color, ctx) {
+  constructor(x, y, w, h, imgPath, ctx) {
     this.x = x;
     this.y = y;
     this.w = w;
     this.h = h;
-    this.color = color;
     this.ctx = ctx;
     this.speedX = 0;
     this.speedY = 0;
+    this.img = new Image()
+    this.img.src = imgPath;
+
   }
 
   newPos() {
@@ -16,8 +18,8 @@ class Component {
   }
 
   draw() {
-    this.ctx.fillStyle = this.color;
-    this.ctx.fillRect(this.x % 1200, this.y % 800, this.w, this.h);
+    //this.ctx.fillRect(this.x % 1200, this.y % 800, this.w, this.h);
+    this.ctx.drawImage(this.img, this.x % 1200, this.y % 800, this.w, this.h);
   }
 
   top() {

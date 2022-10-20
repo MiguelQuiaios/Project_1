@@ -62,12 +62,12 @@ class Game {
   
       if (this.frames % 30 === 0) {
         this.obstacles.push(new Component(1000
-        , Math.floor(Math.random() * ((800 - 100 + 1) + 100)), 50, 50, 'red', this.ctx))
+        , Math.floor(Math.random() * ((800 - 100 + 1) + 100)), 60, 60, "docs/assets/images/ball-removebg-preview (1).png", this.ctx))
         
       }
       if (this.frames % 600 === 0) {
         this.obstacles.push(new Component(1000
-        , Math.floor(Math.random() * ((800 - 100 + 1) + 100)), 50, 50, 'yellow', this.ctx))
+        , Math.floor(Math.random() * ((800 - 100 + 1) + 100)), 100, 50, 'docs/assets/images/Golden_Snitch.png', this.ctx))
         
       }
       

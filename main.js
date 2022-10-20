@@ -1,6 +1,6 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-const player = new Component(600, 400, 50, 50, 'black', ctx);
+const player = new Component(600, 400, 100, 100, 'docs/assets/images/harryPotter-removebg-preview-removebg-preview (2).png', ctx);
 
 let game = new Game(ctx, 1200, 800, player);
 
