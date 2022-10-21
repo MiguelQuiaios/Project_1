@@ -19,19 +19,20 @@ class Game {
     }
   
     score() {
-      const points = Math.floor(this.frames / 5);
-      this.ctx.fillStyle = 'red';
-      this.ctx.fillText(`Score: ${points}`, 100, 100);
+      const points = Math.floor(this.frames / 60);
+      this.ctx.font = '18px monospace';
+      this.ctx.fillStyle = 'black';
+      this.ctx.fillText(`Score: ${points}`, 20, 40);
     }
   
     update = () => {
-      this.score();
       this.frames++;
       this.clear();
       this.player.newPos();
       this.player.draw();
       this.updateObstacles();
       this.checkGameOver();
+      this.score();
     };
   
     stop() {
